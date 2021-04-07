@@ -42,6 +42,7 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 * [Messaging]
 * [Distance calculation]
 * [Bookmarker]
+* [payment system]
 
 ### 2. Screen Archetypes
 
