@@ -14,7 +14,7 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+This app is primarily used to rate existing apartments/landlords within cities. It's no secret in big cities renters are usually taken advantage of. This app will help shed light on such an issue. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
