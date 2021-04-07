@@ -31,30 +31,38 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* [User Login]
+* [User Registering]
+* [Review]
+* [Guest View]
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* [Messaging]
+* [Distance calculation]
+* [Bookmarker]
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
+* [Login Screen]
    * [list associated required story here]
    * ...
-* [list second screen here]
+* [Signup Screen]
    * [list associated required story here]
    * ...
-
+* [Compose Screen]
+   * [list associated required story here]
+   * ...
+* [Feed screen]
+   * [list associated required story here]
+   * ...
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* [Feed]
+* [Rent ad compose]
+* [Profile]
 
 **Flow Navigation** (Screen to Screen)
 
