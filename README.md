@@ -1,7 +1,7 @@
 # RentAHome
 Codepath poject rentahome app.
 
-Original App Design Project - README Template
+Original App Design Project
 ===
 
 # RentAHome
@@ -31,11 +31,12 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 **Required Must-have Stories**
 
-* [User Login]
-* [User Registering]
+* [Account Login]
+* [Account creation]
 * [Review]
-* [Guest View]
+* [Guest login]
 * [Compose rent ad]
+* [Posting rent ad]
 
 **Optional Nice-to-have Stories**
 
@@ -47,16 +48,17 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 ### 2. Screen Archetypes
 
 * [Login Screen]
-   * [list associated required story here]
-   * ...
+   * Account login
+   * Guest Login
 * [Signup Screen]
-   * [list associated required story here]
-   * ...
+   * Account creation
 * [Compose Screen]
-   * [list associated required story here]
-   * ...
+   * [Compose and post ad]
+   * 
 * [Feed screen]
-   * [list associated required story here]
+   * [View rent ad]
+* [Home screen]
+   * []
    * ...
 ### 3. Navigation
 
