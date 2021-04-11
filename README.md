@@ -37,6 +37,10 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 * [Guest login]
 * [Compose rent ad]
 * [Posting rent ad]
+* [Navigation menu]
+* [sign out]
+* [Display written review]
+* [Rating]
 
 **Optional Nice-to-have Stories**
 
@@ -44,6 +48,8 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 * [Distance calculation]
 * [Bookmarker]
 * [payment system]
+* [Edit profile]
+* [Display rent history]
 
 ### 2. Screen Archetypes
 
@@ -54,28 +60,28 @@ This app is primarily used to rate existing apartments/landlords within cities. 
    * Account creation
 * [Compose Screen]
    * [Compose and post ad]
-   * 
 * [Feed screen]
    * [View rent ad]
-* [Home screen]
-   * []
-   * ...
+* [Profile]
+   * [Edit profile]
+   * [Display rent history]
+* [Review screen]
+   * [Display written review]
+   * [Rating]
+* [Option menu]
+   * [Sign out]
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [Feed]
-* [Rent ad compose]
-* [Profile]
+* [Guest View]
+* [Sign up]
+* [Login view]
+* [Read review]
+* [Profile screen]
+* [Option menu]
 
 **Flow Navigation** (Screen to Screen)
-
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
