@@ -1,5 +1,5 @@
 # RentAHome
-Codepath poject rentahome app.
+Codepath project rentahome app.
 
 Original App Design Project
 ===
@@ -14,7 +14,7 @@ Original App Design Project
 
 ## Overview
 ### Description
-This app is primarily used to rate existing apartments/landlords within cities. It's no secret in big cities renters are usually taken advantage of. This app will help shed light on such an issue. 
+This app is primarily used to rate existing apartments/landlords within cities. It's no secret in big cities that renters are usually taken advantage of. This app will help shed light on such an issue by providing a source/database to assess the conduct of landlords. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
