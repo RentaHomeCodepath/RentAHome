@@ -18,10 +18,10 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
+- **Category: Business**
+- **Mobile: Android Market**
+- **Story: **
+- **Market: Real Estate \ Rentals**
 - **Habit:**
 - **Scope:**
 
@@ -84,8 +84,8 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 **Flow Navigation** (Screen to Screen)
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/IMG_0170.JPG" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
