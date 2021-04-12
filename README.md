@@ -20,7 +20,7 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 [Evaluation of your app across the following attributes]
 - **Category: Business**
 - **Mobile: Android Market**
-- **Story: **
+- **Story:**
 - **Market: Real Estate \ Rentals**
 - **Habit:**
 - **Scope:**
