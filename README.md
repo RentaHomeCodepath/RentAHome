@@ -19,11 +19,11 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category: Business**
-- **Mobile: Android Market**
-- **Story:**
-- **Market: Real Estate \ Rentals**
-- **Habit:**
-- **Scope:**
+- **Mobile:Uses Camera . Mobile experience**
+- **Story: People will managing multiple property and collection of rent payment on this app and allow Rentee to review home from other renter as well as acting as payment system for rentee to the landlord**
+- **Market: Real Estate \ Rentals. Alot of people may come to the app for easy access to rent ad as well as ways to manage their property without the renting firm.**
+- **Habit: The users would have to come back every month for payment dued. Is not very addictive but more so a app that you will use whenever you need it.**
+- **Scope: The core feature of the app is reviewing and more features can be implemented such as managing proprties and managing payment**
 
 ## Product Spec
 
