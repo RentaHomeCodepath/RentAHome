@@ -97,14 +97,36 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 
 User
+Property | Type | Desciption 
+--- | --- | --- 
+username| string | username for login  
+password| string | password for login
+balance| float | How much money is in the User's balance
+createdAt| DateTime |date when account is created
 
 
 Review
 Property | Type | Desciption 
 --- | --- | --- 
-review |  |
+author | pointer to User | review author
+description | string | unique user experience describe by the author
+likesCount| number| number of the like for the review
+createdAt| DateTime |date when review is created
+updatedAt| DateTime |date when review is updated
+image| File| image of the house
+objectId| string | unique id for the review
+verify |boolean| If the review author is the past rentee
+
 
 Post
+Property | Type | Desciption 
+--- | --- | ---
+objectId| string | unique id for the post
+review | custom review class | A set of data pertaining to the rating of the property
+state | boolean | If the property is being rented out at the moment
+Landlord | pointer to user | property's owner
+rentee| array of pointer to user | past rentee that have rented the place
+
 
 [Add table of models]
 ### Networking
