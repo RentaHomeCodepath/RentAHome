@@ -94,9 +94,17 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
+
+
+User
+
+
+Review
 Property | Type | Desciption 
 --- | --- | --- 
-Seconds | 301 | 283 
+review |  |
+
+Post
 
 [Add table of models]
 ### Networking
