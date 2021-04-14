@@ -50,6 +50,7 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 * [payment system]
 * [Edit profile]
 * [Display rent history]
+* [search up users]
 
 ### 2. Screen Archetypes
 
