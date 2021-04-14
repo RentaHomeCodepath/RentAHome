@@ -101,7 +101,7 @@ Property | Type | Desciption
 --- | --- | --- 
 username| string | username for login  
 password| string | password for login
-balance| float | How much money is in the User's balance
+balance| double | How much money is in the User's balance
 createdAt| DateTime |date when account is created
 
 
@@ -115,7 +115,7 @@ createdAt| DateTime |date when review is created
 updatedAt| DateTime |date when review is updated
 image| File| image of the house
 objectId| string | unique id for the review
-verify |boolean| If the review author is the past rentee
+(optional) verify |boolean| If the review author is the past rentee
 
 
 Post
@@ -125,11 +125,26 @@ objectId| string | unique id for the post
 review | custom review class | A set of data pertaining to the rating of the property
 state | boolean | If the property is being rented out at the moment
 Landlord | pointer to user | property's owner
-rentee| array of pointer to user | past rentee that have rented the place
+(optional) rentee| array of pointer to user | past rentee that have rented the place
+address| string | address of the property
+price | number |cost per month
+
 
 
 [Add table of models]
 ### Networking
+* [Feed Screen]
+   * (Read/Get) Query all the reviews
+   * (create/Post) create reviews
+   * (Delete) Delete existing like
+   * (Delete) Delete existing review
+   * (create/Post) create likes
+* [Compouse review Screen]
+   * (create/Post) create reviews
+   * (Delete) Delete existing review
+* [Profile Screen]
+   * (read/Get) Query Logged in user objects
+   * (update/Put) Update user profile image
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
