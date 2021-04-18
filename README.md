@@ -19,11 +19,11 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category: Business**
-- **Mobile:Uses Camera . Mobile experience**
-- **Story: People will managing multiple property and collection of rent payment on this app and allow Rentee to review home from other renter as well as acting as payment system for rentee to the landlord**
-- **Market: Real Estate \ Rentals. Alot of people may come to the app for easy access to rent ad as well as ways to manage their property without the renting firm.**
-- **Habit: The users would have to come back every month for payment dued. Is not very addictive but more so a app that you will use whenever you need it.**
-- **Scope: The core feature of the app is reviewing and more features can be implemented such as managing proprties and managing payment**
+- **Mobile: Uses Camera. Mobile experience**
+- **Story: Landlords are able to manage multiple properties and the collection of rent payment on this app. The App also allows Rentees to review homes from other renters as well as acting as a payment system between rentees and landlords**
+- **Market: Real Estate \ Rentals. A lot of people may come to the app for easy access to rent ads as well as ways to manage their property without dealing with renting firms. Very handy data source for Real Estate / Rental Market research.**
+- **Habit: The users would have to come back every month for payment dues. It is not very addictive as it is more of an app that you should/have to use whenever you have to pay your dues.**
+- **Scope: The core feature of the app is reviews. More features can be implemented such as managing properties, managing payments, etc..**
 
 ## Product Spec
 
@@ -140,7 +140,7 @@ price | number |cost per month
    * (Delete) Delete existing like
    * (Delete) Delete existing review
    * (create/Post) create likes
-* [Compouse review Screen]
+* [Compose review Screen]
    * (create/Post) create reviews
    * (Delete) Delete existing review
 * [Profile Screen]
