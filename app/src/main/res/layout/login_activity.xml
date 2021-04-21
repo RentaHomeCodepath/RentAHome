@@ -16,7 +16,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="85dp"
         android:ems="10"
-        android:hint="Email / Username"
+        android:hint="Username"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="98dp" />

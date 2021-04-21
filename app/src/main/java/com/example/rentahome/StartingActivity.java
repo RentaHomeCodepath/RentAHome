@@ -30,9 +30,17 @@ public class StartingActivity extends AppCompatActivity {
                 guestLogin();
             }
         });
+        btnsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {goSignupActivity();}
+        });
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {gologinActivity();}
+        });
     }
     private void goSignupActivity(){
-        Intent intent = new Intent(this, signupActvity.class);
+        Intent intent = new Intent(this, signupActivity.class);
         startActivity(intent);
         finish();
     }

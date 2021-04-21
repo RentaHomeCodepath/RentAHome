@@ -46,7 +46,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/et_password_signup"
+        android:id="@+id/et_username_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_Email_signup"
@@ -56,7 +56,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="85dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Username"
         android:inputType="textPersonName" />
 
     <Button
@@ -66,9 +66,22 @@
         android:layout_below="@+id/et_password_signup"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginStart="159dp"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="158dp"
+        android:layout_marginEnd="159dp"
         android:text="Sign Up" />
+
+    <EditText
+        android:id="@+id/et_password_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_username_signup"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="85dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
 </RelativeLayout>

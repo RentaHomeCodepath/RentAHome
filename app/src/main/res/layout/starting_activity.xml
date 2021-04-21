@@ -9,9 +9,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="155dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="85dp"
+        android:layout_marginEnd="130dp"
         android:text="Sign up" />
 
     <Button
@@ -19,10 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/LoginBtn"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="147dp"
+        android:layout_marginEnd="130dp"
         android:text="Guest View" />
 
     <Button
@@ -30,9 +32,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/SignupBtn"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="165dp"
+        android:layout_marginEnd="130dp"
         android:text="Login" />
 </RelativeLayout>
