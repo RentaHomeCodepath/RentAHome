@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ComposeFragment">
+        <!-- TASKs HERE -->
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:hint="@string/Address" />
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:hint="@string/Description"
+            android:layout_below="@+id/etAddress"/>
+
+        <!-- Change margintop of btnPicture to tweak gap-->
+        <Button
+            android:id="@+id/btnPicture"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:text="UPLOAD IMAGE"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:elevation="10dp"
+            android:textSize="20dp"
+
+            android:onClick="Upload"
+            android:gravity="center"
+            android:layout_below="@+id/etDescription"
+            android:layout_centerHorizontal="true"
+            app:backgroundTint="#C6C6C6"
+            android:textColor="@color/black" />
+        <!--android:background="@drawable/round_button" ADD LATER-->
+
+        <ImageView
+            android:layout_below="@+id/btnPicture"
+            android:id="@+id/ivPostImage"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPostImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="#C6C6C6"
+            android:text="SUBMIT"
+            android:textColor="@color/black"
+            app:backgroundTint="#C6C6C6" />
+
+
+    </RelativeLayout>
+</layout>
