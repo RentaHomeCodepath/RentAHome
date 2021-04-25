@@ -8,7 +8,7 @@
         android:title="Home"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_compose"
+        android:id="@+id/action_menu"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
         android:title="Compose"
         app:showAsAction="always" />

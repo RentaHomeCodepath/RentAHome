@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
                 Fragment fragment;
                 switch (menuitem.getItemId()){
-                    case R.id.nav_home:break;
-                    case R.id.profile: break;
-                    case R.id.options: break;
+                    case R.id.action_home:break;
+                    case R.id.action_profile: break;
+                    case R.id.action_menu: break;
                 }
 
                 return true;
