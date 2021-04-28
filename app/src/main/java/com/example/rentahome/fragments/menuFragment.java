@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.rentahome.R;
+import com.example.rentahome.StartingActivity;
 import com.example.rentahome.loginActivity;
 import com.parse.ParseUser;
 
@@ -79,7 +80,7 @@ public class menuFragment extends Fragment {
             public void onClick(View v) {
                 ParseUser.logOut();
                 ParseUser currentUser = ParseUser.getCurrentUser();
-                Intent intent = new Intent(getContext(), loginActivity.class);
+                Intent intent = new Intent(getContext(), StartingActivity.class);
                 startActivity(intent);
                 //finish();
             }

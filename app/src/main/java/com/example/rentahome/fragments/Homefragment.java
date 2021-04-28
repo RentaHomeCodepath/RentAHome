@@ -89,7 +89,7 @@ public class Homefragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-        rvPosts = getView().findViewById(R.id.rvPosts);
+        rvPosts = view.findViewById(R.id.rvPosts);
 
         allPosts = new ArrayList<>();
         adapter = new PostsAdapter(getContext(), allPosts);
