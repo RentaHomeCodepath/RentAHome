@@ -95,6 +95,7 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
 
 
 User
