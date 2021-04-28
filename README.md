@@ -150,4 +150,5 @@ price | number |cost per month
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 progress gif
+------------------------------------------------------------------------------------------------
 <img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
