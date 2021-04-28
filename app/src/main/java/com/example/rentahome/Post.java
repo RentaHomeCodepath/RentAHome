@@ -1,14 +1,19 @@
 package com.example.rentahome;
 
+import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+@ParseClassName("Post")
 public class Post extends ParseObject {
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_IMAGE = "image";     //image should be 'uploaded'
     public static final String KEY_USER = "username";
     public static final String KEY_CREATED_KEY = "createdAt"; //have to figure out how to implement
+    public static final String KEY_address = "address";
+    public static final String KEY_price = "price";
+
 
     public String getDescription(){
         return getString(KEY_DESCRIPTION);
