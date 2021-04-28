@@ -149,6 +149,6 @@ price | number |cost per month
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
-progress gif
+Progress gif
 ------------------------------------------------------------------------------------------------
 <img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
