@@ -95,8 +95,6 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
-
 
 User
 Property | Type | Desciption 
@@ -150,3 +148,6 @@ price | number |cost per month
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+progress gif
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
