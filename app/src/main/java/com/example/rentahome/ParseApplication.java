@@ -1,7 +1,6 @@
 package com.example.rentahome;
 
 import android.app.Application;
-import android.graphics.PostProcessor;
 
 import com.parse.Parse;
 import com.parse.ParseObject;
@@ -14,7 +13,7 @@ public class ParseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ParseObject.registerSubclass(Post.class);
-
+        ParseObject.registerSubclass(Reviews.class);
         // Use for troubleshooting -- remove this line for production
         Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
 
