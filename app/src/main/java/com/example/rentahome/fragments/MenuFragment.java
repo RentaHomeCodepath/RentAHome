@@ -14,15 +14,14 @@ import android.widget.Button;
 
 import com.example.rentahome.R;
 import com.example.rentahome.StartingActivity;
-import com.example.rentahome.loginActivity;
 import com.parse.ParseUser;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link menuFragment#newInstance} factory method to
+ * Use the {@link MenuFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class menuFragment extends Fragment {
+public class MenuFragment extends Fragment {
     private Button btnsignout;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +32,7 @@ public class menuFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public menuFragment() {
+    public MenuFragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +42,11 @@ public class menuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment menuFragment.
+     * @return A new instance of fragment MenuFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static menuFragment newInstance(String param1, String param2) {
-        menuFragment fragment = new menuFragment();
+    public static MenuFragment newInstance(String param1, String param2) {
+        MenuFragment fragment = new MenuFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
