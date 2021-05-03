@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,10 +26,11 @@ import com.parse.ParseRelation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
 
+public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
     private Context context;
     private List<Post> posts;
+
 
     public PostsAdapter(Context context, List<Post> posts) {
         this.context = context;
@@ -61,7 +63,8 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private ImageView ivImage;
         private TextView tvDescription;
         private TextView tvPrice;
-        private RatingBar ratingBar;
+        private RatingBar vratingBar;
+        final double[] total = {0};
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,30 +72,38 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ivImage = itemView.findViewById(R.id.ivImage);
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvPrice = itemView.findViewById(R.id.tvPrice);
-            ratingBar = itemView.findViewById(R.id.ratingBar);
+            vratingBar = itemView.findViewById(R.id.ratingBar);
             Resources res = itemView.getResources();
         }
 
         public void bind(Post post) {
             // Bind the post data to the view wlwments
-            ParseQuery<ParseObject> query = post.getrelation().getQuery();
-            query.orderByDescending("createdAt");
-            query.setLimit(10);
-            query.include("Post");
 
-            query.findInBackground((objects, e) -> {
-                for(ParseObject i: objects){
-                    ParseObject review = i.getParseObject("reviews");
-                    double hi = review.getDouble("rating");
-                    Log.d("Reviews", "retrieved a related post");
-                    Log.i("Rating",String.valueOf(hi));
+            String postID = post.getobjectID();
+            ParseQuery<ParseObject> query = post.getrelation().getQuery();
+            //query.whereEqualTo("post_id",postID);
+            query.findInBackground(new FindCallback<ParseObject>() {
+
+                @Override
+                public void done(List<ParseObject> objects, ParseException e) {
+
+                    for(ParseObject i : objects){
+                        total[0] = total[0] + i.getDouble("rating");
+                    }
+                    Toast.makeText(context, String.valueOf(total[0]), Toast.LENGTH_LONG).show();
                 }
             });
+            vratingBar.setRating((float) total[0]);
+            vratingBar.setNumStars(5);
 
             tvDescription.setText((post.getDescription()));
             tvUsername.setText(post.getUser().getUsername());
             tvPrice.setText(String.format(String.valueOf(post.getPrice())));
-            //ratingBar.setRating((float));
+
+
+
+            //Toast.makeText(context, String.valueOf(total), Toast.LENGTH_LONG).show();
+
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
