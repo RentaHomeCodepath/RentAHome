@@ -90,11 +90,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     for(ParseObject i : objects){
                         total[0] = total[0] + i.getDouble("rating");
                     }
+                    //Toast.makeText(context, total[0].getClass(), Toast.LENGTH_LONG).show();
                     Toast.makeText(context, String.valueOf(total[0]), Toast.LENGTH_LONG).show();
+                    vratingBar.setRating((float) total[0]);
                 }
             });
-            vratingBar.setRating((float) total[0]);
-            vratingBar.setNumStars(5);
+
+
+            //vratingBar.setNumStars(5);
 
             tvDescription.setText((post.getDescription()));
             tvUsername.setText(post.getUser().getUsername());
