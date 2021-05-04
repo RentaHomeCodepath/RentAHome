@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.rentahome.Post;
 import com.example.rentahome.PostsAdapter;
@@ -100,6 +101,12 @@ public class Homefragment extends Fragment {
         //3. Link back to Back4APP
         rvPosts.setAdapter(adapter);
 
+        adapter.setOnItemClickListener(new PostsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Log.i("Clicked", "Clicked");
+            }
+        });
         //4. Set adapter on recycler view
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
 
