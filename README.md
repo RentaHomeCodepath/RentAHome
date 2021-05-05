@@ -31,26 +31,26 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 **Required Must-have Stories**
 
-* [Account Login]
-* [Account creation]
-* [Review]
-* [Guest login]
-* [Compose rent ad]
-* [Posting rent ad]
-* [Navigation menu]
-* [sign out]
-* [Display written review]
-* [Rating]
+* [x] [Account Login]
+* [x] [Account creation]
+* [] [Review]
+* [x] [Guest login]
+* [x][Compose rent ad]
+* [] [Posting rent ad]
+* [x] [Navigation menu]
+* [x] [sign out]
+* [] [Display written review]
+* [] [Rating]
 
 **Optional Nice-to-have Stories**
 
-* [Messaging]
-* [Distance calculation]
-* [Bookmarker]
-* [payment system]
-* [Edit profile]
-* [Display rent history]
-* [search up users]
+* [] [Messaging]
+* [] [Distance calculation]
+* [] [Bookmarker]
+* [] [payment system]
+* [] [Edit profile]
+* [] [Display rent history]
+* [] [search up users]
 
 ### 2. Screen Archetypes
 
