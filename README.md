@@ -33,14 +33,14 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 * [x] [Account Login]
 * [x] [Account creation]
-* [] [Review]
+* []  [Review]
 * [x] [Guest login]
-* [x][Compose rent ad]
-* [] [Posting rent ad]
+* [x] [Compose rent ad]
+* []  [Posting rent ad]
 * [x] [Navigation menu]
 * [x] [sign out]
-* [] [Display written review]
-* [] [Rating]
+* []  [Display written review]
+* []  [Rating]
 
 **Optional Nice-to-have Stories**
 
