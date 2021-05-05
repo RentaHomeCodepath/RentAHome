@@ -25,18 +25,22 @@ public class Post extends ParseObject {
     public void setDescription(String description){
         put(KEY_DESCRIPTION, description);
     }
+
     public ParseFile getImage(){
         return getParseFile(KEY_IMAGE);
     }
     public void setImage(ParseFile parseFile){
         put(KEY_IMAGE, parseFile);
     }
+
     public ParseUser getUser(){
         return getParseUser(KEY_USER);
     }
     public void setUser(ParseUser user){put(KEY_USER, user);}
+
     public String getAddress() {return getString(KEY_address);}
     public void setAddress(String address){ put(KEY_address, address);}
+
     public int getPrice(){return getInt(KEY_price);}
     public void setPrice(int price){put(KEY_price,price);}
     public String getobjectID(){return getString(KEY_objectID);}

@@ -13,27 +13,41 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="3dp"
             android:ems="10"
-            android:selectAllOnFocus="true"
-            android:hint="@string/Address" />
+            android:hint="Address: "
+            android:selectAllOnFocus="true" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etAddress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:ems="10"
+            android:hint="Price: "
+            android:selectAllOnFocus="true" />
+
         <EditText
             android:id="@+id/etDescription"
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_height="90dp"
+            android:layout_below="@+id/etPrice"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
             android:ems="10"
-            android:selectAllOnFocus="true"
-            android:hint="@string/Description"
-            android:layout_below="@+id/etAddress"/>
+            android:hint="Description: "
+            android:selectAllOnFocus="true" />
 
         <!-- Change margintop of btnPicture to tweak gap-->
         <Button
             android:id="@+id/btnPicture"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="40dp"
             android:text="UPLOAD IMAGE"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
@@ -49,12 +63,12 @@
         <!--android:background="@drawable/round_button" ADD LATER-->
 
         <ImageView
-            android:id="@+id/ivPostImage"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
             android:layout_below="@+id/btnPicture"
-            android:layout_centerHorizontal="true"
+            android:id="@+id/ivPostImage"
             android:layout_marginTop="25dp"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
             tools:srcCompat="@tools:sample/avatars" />
 
         <Button

@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,10 @@ import com.parse.ParseFile;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import static android.app.Activity.RESULT_OK;
@@ -66,18 +70,28 @@ public class ComposeFragment extends Fragment {
         fragmentComposeBinding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String address = fragmentComposeBinding.etAddress.getText().toString();
+                String price = fragmentComposeBinding.etPrice.getText().toString();
                 String description = fragmentComposeBinding.etDescription.getText().toString();
+                if(address.isEmpty()){
+                    Toast.makeText(getContext(), "Address cannot be empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(price.isEmpty()){
+                    Toast.makeText(getContext(), "Price cannot be empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(description.isEmpty()){
                     Toast.makeText(getContext(), "Description cannot be empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                String
+
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 if(photoFile == null || fragmentComposeBinding.ivPostImage.getDrawable()==null){
                     Toast.makeText(getContext(),"There is no image", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                savePost(description, currentUser, photoFile);
+                savePost(address, price, description, currentUser, photoFile);
             }
         });
     }
@@ -109,7 +123,7 @@ public class ComposeFragment extends Fragment {
             // check version of Anrdoid on device
             if(Build.VERSION.SDK_INT > 27) {
                 // newer version
-                ImageDecoder.Source source = ImageDecoder.createSource(this.getContext().getContentResolver(),photoUri);
+                ImageDecoder.Source source = ImageDecoder.createSource(this.getContext().getContentResolver(), photoUri);
                 image = ImageDecoder.decodeBitmap(source);
             } else {
                 //support older
@@ -150,16 +164,22 @@ public class ComposeFragment extends Fragment {
                 Bitmap selectedImage = loadFromUri(photoUri);
                 // RESIZE BITMAP, see section below
                 // Load the taken image into a preview
-
                 fragmentComposeBinding.ivPostImage.setImageBitmap(selectedImage);
+
             } else { // Result was a failure
                 Toast.makeText(getContext(), "Image not found", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void savePost(String description, ParseUser currentUser, File photoFile) {
+
+
+    private void savePost(String address, String price, String description, ParseUser currentUser, File photoFile) {
         Post post = new Post();
+        post.setAddress(address);
+        //parse String price to int..
+        int parsed_price = Integer.parseInt(price);
+        post.setPrice(parsed_price);
         post.setDescription(description);
         post.setImage(new ParseFile(photoFile));
         post.setUser(currentUser);
