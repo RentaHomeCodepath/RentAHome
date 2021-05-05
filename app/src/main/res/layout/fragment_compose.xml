@@ -31,14 +31,14 @@
         <!-- Change margintop of btnPicture to tweak gap-->
         <Button
             android:id="@+id/btnPicture"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="100dp"
             android:text="UPLOAD IMAGE"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
             android:elevation="10dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
 
             android:onClick="Upload"
             android:gravity="center"
@@ -49,20 +49,22 @@
         <!--android:background="@drawable/round_button" ADD LATER-->
 
         <ImageView
-            android:layout_below="@+id/btnPicture"
             android:id="@+id/ivPostImage"
-            android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
+            android:layout_below="@+id/btnPicture"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivPostImage"
             android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+
             android:layout_marginTop="25dp"
             android:background="#C6C6C6"
             android:text="SUBMIT"

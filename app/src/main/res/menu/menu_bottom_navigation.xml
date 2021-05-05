@@ -15,7 +15,7 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_menu"
+        android:id="@+id/action_profile"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
         android:title="Profile"
         app:showAsAction="always" />
