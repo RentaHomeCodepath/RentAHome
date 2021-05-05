@@ -102,7 +102,7 @@ public class ComposeFragment extends Fragment {
         Intent intent = new Intent(Intent.ACTION_PICK,
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         // Create a File reference for future access
-        //photoFile = loadFromUri(photoFileName);
+        photoFile = getPhotoFileUri(photoFileName);
 
         // wrap File object into a content provider
         // required for API >= 24
@@ -134,7 +134,7 @@ public class ComposeFragment extends Fragment {
         }
         return image;
     }
-    /*
+
     private File getPhotoFileUri(String fileName) {
         // Get safe storage directory for photos
         // Use `getExternalFilesDir` on Context to access package-specific directories.
@@ -150,7 +150,7 @@ public class ComposeFragment extends Fragment {
         File file = new File(mediaStorageDir.getPath() + File.separator + fileName);
 
         return file;
-    } */
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
