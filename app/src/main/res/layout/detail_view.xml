@@ -18,8 +18,8 @@
 
     <TextView
         android:id="@+id/tvAddress_dv"
-        android:layout_width="263dp"
-        android:layout_height="18dp"
+        android:layout_width="260dp"
+        android:layout_height="20dp"
         android:layout_marginTop="10dp"
         android:hint="Address"
         app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
@@ -27,18 +27,31 @@
 
     <TextView
         android:id="@+id/tvPrice_dv"
-        android:layout_width="262dp"
-        android:layout_height="19dp"
+        android:layout_width="260dp"
+        android:layout_height="20dp"
         android:hint="Price"
         app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
         app:layout_constraintTop_toBottomOf="@+id/tvAddress_dv" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="388dp"
-        android:layout_height="575dp"
+        android:id="@+id/recyclerView_reviews"
+        android:layout_width="382dp"
+        android:layout_height="463dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvimage_dv" />
+
+    <TextView
+        android:id="@+id/description_"
+        android:layout_width="260dp"
+        android:layout_height="89dp"
+        android:layout_marginEnd="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_reviews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice_dv" />
 </androidx.constraintlayout.widget.ConstraintLayout>
