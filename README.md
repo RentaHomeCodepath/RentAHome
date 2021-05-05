@@ -86,7 +86,7 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 
 ## Wireframes
 
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsx.gif" width=600>
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/IMG_0170.JPG" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -151,4 +151,4 @@ price | number |cost per month
 
 Progress gif
 ------------------------------------------------------------------------------------------------
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsx.gif"  width=600>
