@@ -8,50 +8,45 @@
 
     <ImageView
         android:id="@+id/tvimage_dv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="129dp"
+        android:layout_height="130dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvAddress_dv"
-        android:layout_width="260dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="284dp"
+        android:layout_height="16dp"
         android:hint="Address"
         app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvPrice_dv"
-        android:layout_width="260dp"
-        android:layout_height="20dp"
+        android:layout_width="284dp"
+        android:layout_height="21dp"
         android:hint="Price"
         app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
         app:layout_constraintTop_toBottomOf="@+id/tvAddress_dv" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_reviews"
-        android:layout_width="382dp"
-        android:layout_height="463dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="389dp"
+        android:layout_height="460dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvimage_dv" />
 
     <TextView
-        android:id="@+id/description_"
-        android:layout_width="260dp"
-        android:layout_height="89dp"
-        android:layout_marginEnd="10dp"
+        android:id="@+id/description_dv"
+        android:layout_width="285dp"
+        android:layout_height="90dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView_reviews"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrice_dv" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice_dv"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,8 +16,8 @@ public class Reviews extends ParseObject {
     public void setDescription(String description){put(KEY_description, description);}
     public ParseUser getAuthor(){return getParseUser(KEY_author); }
     public void setAuthor(ParseUser author){put(KEY_author,author);}
-    public double getRating(){return getDouble(KEY_rating);}
-    public void setRating(double rating) {put(KEY_rating, rating);}
+    public float getRating(){return (float)getDouble(KEY_rating);}
+    public void setRating(float rating) {put(KEY_rating, rating);}
     public int getlikesCount() {return getInt(KEY_likesCount);}
     public void setlikesCount(int likesCount){put(KEY_likesCount, likesCount);}
     public int getdislikesCount() {return getInt(KEY_dislikesCount);}

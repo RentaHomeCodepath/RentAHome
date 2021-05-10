@@ -25,7 +25,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     @NonNull
     @Override
     public ReviewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_post, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.review_detailview, parent, false);
         return new ReviewAdapter.ViewHolder(view);
     }
 
@@ -57,6 +57,10 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
             dislike_count = itemView.findViewById(R.id.dislike_count_dv);
         }
         public void bind(Reviews reviews) {
+            description.setText(reviews.getDescription());
+            like_count.setText(String.format(String.valueOf(reviews.getlikesCount())));
+            dislike_count.setText(String.format(String.valueOf(reviews.getdislikesCount())));
+            ratingBar_r.setRating((float)reviews.getRating());
 
         }
     }

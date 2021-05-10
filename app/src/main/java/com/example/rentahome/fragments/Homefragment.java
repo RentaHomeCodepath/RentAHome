@@ -1,18 +1,24 @@
 package com.example.rentahome.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.FragmentManager;
 
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.rentahome.Post;
 import com.example.rentahome.PostsAdapter;
@@ -20,6 +26,7 @@ import com.example.rentahome.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.example.rentahome.fragments.DetailView_fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,19 +36,22 @@ import java.util.List;
  * Use the {@link Homefragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Homefragment extends Fragment {
-
+public class Homefragment extends Fragment{
     public static final String TAG = "Homefragment";
     private RecyclerView rvPosts; //recyclerView for Home fragment.
     private PostsAdapter adapter;
     protected List<Post> allPosts;
 
+    //private FragmentAListener listener;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+//    public interface FragmentAListener{
+//        void onInputAsent(Post post);
+//    }
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -104,7 +114,18 @@ public class Homefragment extends Fragment {
         adapter.setOnItemClickListener(new PostsAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Log.i("Clicked", "Clicked");
+                //Log.i("Clicked", "Clicked");
+                //viewModel.setPost(allPosts.get(position));
+                Post input = allPosts.get(position);
+
+                DetailView_fragment nextFrag= new DetailView_fragment();
+
+                nextFrag.updatePost(allPosts.get(position));
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.flContainer, nextFrag)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         //4. Set adapter on recycler view
@@ -124,7 +145,6 @@ public class Homefragment extends Fragment {
             public void done(List<Post> posts, ParseException e) {
                 if (e!=null) {
 
-
                     Log.e(TAG, "Issue with getting post", e);
                     return;
                 }
@@ -143,6 +163,20 @@ public class Homefragment extends Fragment {
 
     }
 
+//    @Override
+//    public void onAttach(Context context){
+//        super.onAttach(context);
+//        if(context instanceof FragmentAListener){
+//            listener = (FragmentAListener) context;
+//        }else{
+//            throw new RuntimeException(context.toString() + " must implement FragmentAListener");
+//        }
+//    }
+//    @Override
+//    public void onDetach(){
+//        super.onDetach();
+//        listener = null;
+//    }
 
 
 }
