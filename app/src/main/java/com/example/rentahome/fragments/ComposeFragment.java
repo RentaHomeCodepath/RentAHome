@@ -21,11 +21,18 @@ import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
+import com.example.rentahome.ImageFilePath;
 import com.example.rentahome.Post;
 import com.example.rentahome.R;
+import com.example.rentahome.Reviews;
 import com.example.rentahome.databinding.FragmentComposeBinding;
+import com.parse.Parse;
+import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
+import com.parse.ProgressCallback;
 import com.parse.SaveCallback;
 
 import java.io.ByteArrayOutputStream;
@@ -33,6 +40,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static android.app.Activity.RESULT_OK;
 import static com.parse.Parse.getApplicationContext;
@@ -44,6 +52,7 @@ public class ComposeFragment extends Fragment {
     private File photoFile;
     FragmentComposeBinding fragmentComposeBinding;
     private String photoFileName = "photo.jpg";
+    public String realPath = new String();
     public static final String TAG = "ComposeFragment";
 
     public ComposeFragment() {
@@ -67,6 +76,7 @@ public class ComposeFragment extends Fragment {
                 uploadImage();
             }
         });
+
         fragmentComposeBinding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,13 +95,12 @@ public class ComposeFragment extends Fragment {
                     Toast.makeText(getContext(), "Description cannot be empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
-                ParseUser currentUser = ParseUser.getCurrentUser();
                 if(photoFile == null || fragmentComposeBinding.ivPostImage.getDrawable()==null){
                     Toast.makeText(getContext(),"There is no image", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                savePost(address, price, description, currentUser, photoFile);
+                ParseUser currentUser = ParseUser.getCurrentUser();
+                savePost(address, price, description, currentUser);
             }
         });
     }
@@ -102,8 +111,9 @@ public class ComposeFragment extends Fragment {
         Intent intent = new Intent(Intent.ACTION_PICK,
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         // Create a File reference for future access
-        photoFile = getPhotoFileUri(photoFileName);
+        //photoFile = getPhotoFileUri(photoFileName);
 
+        intent.setType("image/*");
         // wrap File object into a content provider
         // required for API >= 24
         // See https://guides.codepath.com/android/Sharing-Content-with-Intents#sharing-files-with-api-24-or-higher
@@ -139,7 +149,7 @@ public class ComposeFragment extends Fragment {
         // Get safe storage directory for photos
         // Use `getExternalFilesDir` on Context to access package-specific directories.
         // This way, we don't need to request external read/write runtime permissions.
-        File mediaStorageDir = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES), TAG);
+        File mediaStorageDir = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), TAG);
 
         // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists() && !mediaStorageDir.mkdirs()){
@@ -155,34 +165,73 @@ public class ComposeFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if ((data != null) && requestCode == PICK_PHOTO_CODE) {
-            if (resultCode == RESULT_OK) {
-                Uri photoUri = data.getData();
-                // by this point we have the camera photo on disk
-                //Bitmap selectedImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
-                //Load the image located at photoUri into selectedImage
-                Bitmap selectedImage = loadFromUri(photoUri);
-                // RESIZE BITMAP, see section below
-                // Load the taken image into a preview
-                fragmentComposeBinding.ivPostImage.setImageBitmap(selectedImage);
 
-            } else { // Result was a failure
-                Toast.makeText(getContext(), "Image not found", Toast.LENGTH_SHORT).show();
+        if (requestCode == PICK_PHOTO_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+            Uri uri = data.getData();
+
+
+            realPath = ImageFilePath.getPath(getContext(), data.getData());
+//                realPath = RealPathUtil.getRealPathFromURI_API19(this, data.getData());
+
+            Log.i(TAG, "onActivityResult: file path : " + realPath);
+            try {
+
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContext().getContentResolver(), uri);
+                // Log.d(TAG, String.valueOf(bitmap));
+                fragmentComposeBinding.ivPostImage.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+        } else {
+            Toast.makeText(getContext(), "Something Went Wrong", Toast.LENGTH_SHORT).show();
         }
+
+//        if ((data != null) && requestCode == PICK_PHOTO_CODE) {
+//            if (resultCode == RESULT_OK) {
+//                Uri photoUri = data.getData();
+//                // by this point we have the camera photo on disk
+//                //Bitmap selectedImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
+//                //Load the image located at photoUri into selectedImage
+//                Bitmap selectedImage = loadFromUri(photoUri);
+//                // RESIZE BITMAP, see section below
+//                // Load the taken image into a preview
+//                fragmentComposeBinding.ivPostImage.setImageBitmap(selectedImage);
+//
+//            } else { // Result was a failure
+//                Toast.makeText(getContext(), "Image not found", Toast.LENGTH_SHORT).show();
+//            }
+//        }
     }
 
 
 
-    private void savePost(String address, String price, String description, ParseUser currentUser, File photoFile) {
+    private void savePost(String address, String price, String description, ParseUser currentUser) {
         Post post = new Post();
-        post.setAddress(address);
+        File file = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getPath() + realPath);
+        ParseFile photo = new ParseFile(file);
+
+        post.setImage(photo);
+
         //parse String price to int..
         int parsed_price = Integer.parseInt(price);
         post.setPrice(parsed_price);
         post.setDescription(description);
-        post.setImage(new ParseFile(photoFile));
         post.setUser(currentUser);
+        post.setAddress(address);
+
+
+        ParseObject gameScore = ParseObject.create("Reviews");
+        gameScore.put("Description","Hi ");
+        gameScore.put("author",currentUser);
+        gameScore.put("rating",(float)(5.0));
+        gameScore.put("likesCount",0);
+        gameScore.put("dislikesCount",0);
+
+        ArrayList<ParseObject> temp = new ArrayList<ParseObject>();
+        temp.add(gameScore);
+        post.addAllUnique("Reviews", temp);
+
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(com.parse.ParseException e) {
@@ -196,5 +245,8 @@ public class ComposeFragment extends Fragment {
                 fragmentComposeBinding.ivPostImage.setImageResource(0);
             }
         });
+
+
+
     }
 }

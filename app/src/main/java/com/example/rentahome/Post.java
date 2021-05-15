@@ -46,7 +46,7 @@ public class Post extends ParseObject {
     public String getobjectID(){return getString(KEY_objectID);}
 
     public ParseRelation<ParseObject>  getrelation() {return getRelation(KEY_reviews);}
-    public void setrelation(ParseRelation<ParseObject>  relation){put(KEY_reviews, relation);}
+    public void setrelation(ArrayList<ParseObject>  relation){put(KEY_reviews, relation);}
 
     //public ParseRelation<ParseObject> getReviews(){return getRelation(KEY_reviews);}
     //public void setReviews(ParseRelation<ParseObject> reviews){put(KEY_reviews, reviews);}

@@ -12,6 +12,8 @@ public class Reviews extends ParseObject {
     public static final String KEY_dislikesCount = "dislikesCount";
     public static final String KEY_rating = "rating";
 
+
+
     public String getDescription(){return getString(KEY_description);}
     public void setDescription(String description){put(KEY_description, description);}
     public ParseUser getAuthor(){return getParseUser(KEY_author); }
