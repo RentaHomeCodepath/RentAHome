@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.fragment.app.FragmentManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -41,7 +42,7 @@ public class Homefragment extends Fragment{
     private RecyclerView rvPosts; //recyclerView for Home fragment.
     private PostsAdapter adapter;
     protected List<Post> allPosts;
-
+    private SwipeRefreshLayout swiperContainer;
     //private FragmentAListener listener;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -130,10 +131,22 @@ public class Homefragment extends Fragment{
         });
         //4. Set adapter on recycler view
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
-
         //5. Set layout manager on recycler view
         queryPosts();
+        swiperContainer = view.findViewById(R.id.swiperContainer);
 
+        swiperContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.i(TAG,"fetching new data");
+                queryPosts();
+            }
+        });
+        // Configure the refreshing colors
+        swiperContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
     }
     protected void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
@@ -152,11 +165,10 @@ public class Homefragment extends Fragment{
                     Log.i(TAG, "Post: " + post.getDescription());
 
                 }
+                allPosts.clear();
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
-
-
-
+                swiperContainer.setRefreshing(false);
             }
         });
 
