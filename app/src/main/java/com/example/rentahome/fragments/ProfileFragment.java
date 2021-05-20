@@ -73,7 +73,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-        btnsignout = view.findViewById(R.id.sign_out_btn_menu);
+        btnsignout = view.findViewById(R.id.sign_out_btn_menu);// READD THIS LINE WHEN ADDING BUTTON IN LAST FRAGMENT
         btnsignout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
