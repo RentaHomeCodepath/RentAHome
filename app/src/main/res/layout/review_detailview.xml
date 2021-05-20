@@ -23,42 +23,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description_rv" />
 
-    <Button
+    <ImageButton
         android:id="@+id/like_btn_dv"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:text="Like"
+        android:background="@color/white"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/Like_count_dv"
+        app:layout_constraintEnd_toStartOf="@+id/dislike_btn_dv"
         app:layout_constraintStart_toEndOf="@+id/ratingBar_rv"
-        app:layout_constraintTop_toBottomOf="@+id/description_rv" />
+        app:layout_constraintTop_toBottomOf="@+id/description_rv"
+        app:srcCompat="@drawable/ic_thumbs_up_off" />
 
-    <Button
+    <ImageButton
         android:id="@+id/dislike_btn_dv"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:text="dislike"
+        android:background="@color/white"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/dislike_count_dv"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/like_btn_dv"
-        app:layout_constraintTop_toBottomOf="@+id/description_rv" />
+        app:layout_constraintTop_toBottomOf="@+id/description_rv"
+        app:srcCompat="@drawable/ic_thumbs_down_off" />
 
     <TextView
         android:id="@+id/Like_count_dv"
-        android:layout_width="85dp"
+        android:layout_width="75dp"
         android:layout_height="25dp"
-        android:text="Like:"
+        android:text="@string/likes"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ratingBar_rv"
-        app:layout_constraintTop_toBottomOf="@+id/like_btn_dv" />
+        app:layout_constraintEnd_toStartOf="@+id/dislike_count_dv"/>
 
     <TextView
         android:id="@+id/dislike_count_dv"
-        android:layout_width="85dp"
+        android:layout_width="75dp"
         android:layout_height="25dp"
-        android:text="Dislike:"
+        android:text="@string/dislikes"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Like_count_dv"
-        app:layout_constraintTop_toBottomOf="@+id/dislike_btn_dv" />
+        app:layout_constraintStart_toEndOf="@+id/Like_count_dv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

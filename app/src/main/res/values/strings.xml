@@ -5,4 +5,6 @@
     <string name="Description" />
     <string name="Address" />
     <string name="price">Price:$ %1$s</string>
+    <string name="dislikes">Dislikes:</string>
+    <string name="likes">Likes:</string>
 </resources>
