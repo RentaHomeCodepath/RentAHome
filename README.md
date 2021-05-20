@@ -151,4 +151,4 @@ price | number |cost per month
 
 Progress gif
 ------------------------------------------------------------------------------------------------
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxx.gif"  width=600>
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxxLLLLL.gif"  width=600>
