@@ -163,20 +163,4 @@ public class Homefragment extends Fragment{
 
     }
 
-//    @Override
-//    public void onAttach(Context context){
-//        super.onAttach(context);
-//        if(context instanceof FragmentAListener){
-//            listener = (FragmentAListener) context;
-//        }else{
-//            throw new RuntimeException(context.toString() + " must implement FragmentAListener");
-//        }
-//    }
-//    @Override
-//    public void onDetach(){
-//        super.onDetach();
-//        listener = null;
-//    }
-
-
 }

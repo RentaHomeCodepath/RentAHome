@@ -49,4 +49,13 @@
         app:layout_constraintStart_toEndOf="@+id/tvimage_dv"
         app:layout_constraintTop_toBottomOf="@+id/tvPrice_dv"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/add_review_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AddReview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_reviews" />
 </androidx.constraintlayout.widget.ConstraintLayout>

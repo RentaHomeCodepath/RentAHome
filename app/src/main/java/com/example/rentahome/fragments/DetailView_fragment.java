@@ -50,6 +50,7 @@ public class DetailView_fragment extends Fragment {
     private  TextView price;
     private TextView description;
     private ImageView tvimage;
+    private Button mkreview;
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -108,6 +109,7 @@ public class DetailView_fragment extends Fragment {
         description = view.findViewById(R.id.description_dv);
         address = view.findViewById(R.id.tvAddress_dv);
         price = view.findViewById(R.id.tvPrice_dv);
+        mkreview = view.findViewById(R.id.add_review_btn);
 
         String postID = loadpost.getobjectID();
         ParseQuery<ParseObject> query = loadpost.getrelation().getQuery();
@@ -141,18 +143,14 @@ public class DetailView_fragment extends Fragment {
             Glide.with(getContext()).load(loadpost.getImage().getUrl()).into(tvimage);
         }
 
-    }
+        mkreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState){
-//        super.onActivityCreated(savedInstanceState);
-//        viewModel = ViewModelProviders.of(getActivity()).get(SharedViewModel.class);
-//        viewModel.getPost().observe(getViewLifecycleOwner(), new Observer<Post>() {
-//            @Override
-//            public void onChanged(Post post) {
-//                loadpost = post;
-//            }
-//        });
-//    }
+
+            }
+        });
+
+    }
 
 }
