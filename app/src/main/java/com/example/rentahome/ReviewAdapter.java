@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -41,8 +42,8 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView description;
-        private Button like;
-        private Button dislike;
+        private ImageButton like;
+        private ImageButton dislike;
         private TextView like_count;
         private TextView dislike_count;
         private RatingBar ratingBar_r;
