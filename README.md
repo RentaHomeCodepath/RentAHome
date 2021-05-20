@@ -36,10 +36,10 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 * []  [Review]
 * [x] [Guest login]
 * [x] [Compose rent ad]
-* []  [Posting rent ad]
+* [x]  [Posting rent ad]
 * [x] [Navigation menu]
 * [x] [sign out]
-* []  [Display written review]
+* [x]  [Display written review]
 * []  [Rating]
 
 **Optional Nice-to-have Stories**
