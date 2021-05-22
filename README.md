@@ -36,10 +36,10 @@ This app is primarily used to rate existing apartments/landlords within cities. 
 * []  [Review]
 * [x] [Guest login]
 * [x] [Compose rent ad]
-* []  [Posting rent ad]
+* [x]  [Posting rent ad]
 * [x] [Navigation menu]
 * [x] [sign out]
-* []  [Display written review]
+* [x]  [Display written review]
 * []  [Rating]
 
 **Optional Nice-to-have Stories**
@@ -151,4 +151,7 @@ price | number |cost per month
 
 Progress gif
 ------------------------------------------------------------------------------------------------
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=600>
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsx.gif"  width=600>
 <img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxx.gif"  width=600>
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxxLLLLL.gif"  width=600>
