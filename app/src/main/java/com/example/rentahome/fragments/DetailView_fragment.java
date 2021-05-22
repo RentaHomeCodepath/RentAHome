@@ -146,8 +146,14 @@ public class DetailView_fragment extends Fragment {
         mkreview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ReviewFragment nextFrag= new ReviewFragment();
 
+                nextFrag.updatePost(loadpost);
 
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.flContainer, nextFrag)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 
