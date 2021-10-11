@@ -151,8 +151,13 @@ price | number |cost per month
 
 Progress gif
 ------------------------------------------------------------------------------------------------
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=250>
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsx.gif"  width=250>
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxx.gif"  width=250>
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxxLLLLL.gif"  width=250>
-<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomefinalx.gif"  width=250>
+** Stage 1
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo.gif"  width=300>
+** Stage 2
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsx.gif"  width=300>
+** Stage 3
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxx.gif"  width=300>
+** Stage 4
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomedemo2dsxxxxLLLLL.gif"  width=300>
+** Stage 5
+<img src="https://github.com/RentaHomeCodepath/RentAHome/blob/main/rentahomefinalx.gif"  width=300>
