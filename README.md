@@ -7,10 +7,10 @@ Original App Design Project
 # RentAHome
 
 ## Table of Contents
-1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+1. [Overview](#overview)
+1. [Product Spec](#product-spec)
+1. [Wireframes](#wireframes)
+2. [Schema](#schema)
 
 ## Overview
 ### Description
